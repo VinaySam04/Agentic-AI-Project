@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "research-summarizer-agent"
+version = "0.1.0"
+description = "A command-line multi-agent research summarizer powered by Gemini and LangChain."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Vinay" }]
+dependencies = [
+    "langchain-core>=0.3.0",
+    "langchain-google-genai>=2.0.0",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0.0", "ruff>=0.6.0"]
+
+[project.scripts]
+research-summarizer-agent = "research_summarizer_agent:main"
+
+[tool.setuptools]
+package-dir = { "" = "src" }
+py-modules = ["research_summarizer_agent"]
+
+[tool.ruff]
+line-length = 88
+target-version = "py310"
