@@ -105,4 +105,6 @@ topics, independently verify the output with trusted sources.
 
 ## License
 
-MIT
+This project is shared for portfolio review only. All rights reserved.
+You may view the code, but you may not copy, modify, distribute, or reuse it
+without written permission.
