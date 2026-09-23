@@ -11,6 +11,7 @@ requires-python = ">=3.10"
 license = { text = "MIT" }
 authors = [{ name = "Vinay" }]
 dependencies = [
+    "python-dotenv>=1.0.0",
     "langchain-core>=0.3.0",
     "langchain-google-genai>=2.0.0",
 ]
