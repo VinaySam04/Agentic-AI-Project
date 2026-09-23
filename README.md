@@ -25,26 +25,36 @@ the evaluation finds gaps.
 git clone https://github.com/VinaySam04/Agentic-AI-Project.git
 cd Agentic-AI-Project
 python -m venv .venv
-.venv\Scripts\activate
-pip install -e ".[dev]"
 ```
 
-On macOS or Linux, activate the virtual environment with:
+On Windows, activate the virtual environment with:
+
+```bash
+.venv\Scripts\activate
+```
+
+On macOS or Linux, activate with:
 
 ```bash
 source .venv/bin/activate
+```
+
+Then install the package with development dependencies:
+
+```bash
+pip install -e ".[dev]"
 ```
 
 ## Configuration
 
 Create an environment variable with your Gemini API key:
 
+On Windows:
 ```bash
 set GOOGLE_API_KEY=your_api_key_here
 ```
 
 On macOS or Linux:
-
 ```bash
 export GOOGLE_API_KEY=your_api_key_here
 ```
@@ -57,16 +67,23 @@ Optional environment variables:
 
 ## Usage
 
-Run with a question:
-
-```bash
-research-summarizer-agent "What are the main impacts of AI on healthcare?"
-```
-
-Or run interactively:
+Run the research summarizer:
 
 ```bash
 research-summarizer-agent
+```
+
+The script will prompt you to enter a research question interactively.
+
+Example:
+```
+Enter research question: What are the main impacts of AI on healthcare?
+```
+
+Alternatively, run directly with Python:
+
+```bash
+python src/research_summarizer_agent.py
 ```
 
 ## Development
@@ -85,17 +102,16 @@ ruff check .
 
 ## Project Structure
 
-```text
+```
 Agentic-AI-Project/
   src/
     research_summarizer_agent.py
   tests/
     test_parse_json.py
-  docs/
-    USAGE.md
-  .github/
-    workflows/
-      ci.yml
+    test_research_summarizer_agent.py
+  requirements.txt
+  pyproject.toml
+  README.md
 ```
 
 ## Notes
